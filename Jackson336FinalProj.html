@@ -1,0 +1,41 @@
+<html>
+<head>
+	<script type="text/javascript">
+		function FabricSales(date, silk, cotton, polyester, chiffon)
+        {
+          this.date_sales = date;
+          this.silk_fabric = silk;
+          this.cotton_fabric = cotton;
+          this.polyester_fabric = polyester;
+          this.chiffon_fabric = chiffon;
+          this.calculateTotal = function()
+          {
+            var total =this.date_sales + this.silk_fabric + this.cotton_fabric + this.polyester_fabric + this.chiffon_fabric;
+         	 return (total);
+          }
+		  this.displaySales = function()
+		  {
+            document.write("Date: " + this.date_sales + "<br />");
+            document.write("Silk: " + this.silk_fabric + "<br />");
+            document.write("Cotton: " + this.cotton_fabric + "<br />");
+            document.write("Polyester: " + this.polyester_fabric + "<br />");
+            document.write("Chiffon: " + this.chiffon_fabric + "<br />");
+            var total = this.calculateTotal();
+            document.write("Total Fabric Sold: " + total + "<br /><br />");
+		  }
+		}
+        var day1 = new FabricSales("May 10, 2020", 40, 35, 55, 42);
+        var day2 = new FabricSales("May 11, 2020", 33, 28, 80, 15);
+        var day3 = new FabricSales("May 12, 2020", 57, 66, 93, 77);
+        var day4 = new FabricSales("May 13, 2020", 54, 47, 86, 63);
+        var day5 = new FabricSales("May 14, 2020", 45, 68, 101, 64);
+        day1.displaySales();
+        day2.displaySales();
+        day3.displaySales();
+        day4.displaySales();
+        day5.displaySales();
+	</script>
+</head>
+<body>
+</body>
+</html>
